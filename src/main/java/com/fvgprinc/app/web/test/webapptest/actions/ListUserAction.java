@@ -20,26 +20,27 @@ import org.apache.struts2.convention.annotation.Result;
  * @author garfi
  */
 @Namespace(value = "/")
-@Action(value = "displayaction", results = {
+@Action(value = "listuseraction", results = {
     @Result(name = SUCCESS, location = "/listdata.jsp")})
 
-public class DisplayAction extends ActionSupport {
+public class ListUserAction extends ActionSupport {
     // private static final long serialVersionUID = -7591893545033222898L;
 
-    private DisplayAction dto = null;
+    private ListUserAction dto = null;
     private String nombre;
     private String apellido;
     private String correo;
 
-    private List<DisplayAction> usuarioList = null;
+    private List<ListUserAction> usuarioList = null;
 
+    @Override
     public String execute() throws Exception {
         ResultSet rs = DisplayDao.Report();
-        usuarioList = new ArrayList<DisplayAction>();
+        usuarioList = new ArrayList<ListUserAction>();
 
         if (rs != null) {
             while (rs.next()) {
-                dto = new DisplayAction();
+                dto = new ListUserAction();
                 dto.setNombre(rs.getString(1));
                 dto.setApellido(rs.getString(2));
                 dto.setCorreo(rs.getString(3));
@@ -50,11 +51,11 @@ public class DisplayAction extends ActionSupport {
         return SUCCESS;
     }
 
-    public List<DisplayAction> getUsuarioList() {
+    public List<ListUserAction> getUsuarioList() {
         return usuarioList;
     }
 
-    public void setUsuarioList(List<DisplayAction> usuarioList) {
+    public void setUsuarioList(List<ListUserAction> usuarioList) {
         this.usuarioList = usuarioList;
     }
 

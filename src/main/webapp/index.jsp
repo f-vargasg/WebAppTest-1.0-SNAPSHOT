@@ -13,6 +13,8 @@
         <title>JSP Page</title>
     </head>
     <body>
+      
+
         <s:form action="useraction.action">
             <s:textfield label="User"  name="user.name"></s:textfield>
             <s:textfield label ="City" name="user.city"></s:textfield>

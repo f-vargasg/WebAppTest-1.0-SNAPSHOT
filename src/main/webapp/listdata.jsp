@@ -22,7 +22,7 @@
     </head>
     <body>
        <h2>Struts 2 pagination using display tag</h2>
-	<display:table name="usuarioList" pagesize="12" requestURI="displayaction.action">
+	<display:table name="usuarioList" pagesize="12" requestURI="listuseraction.action">
 
 		<display:caption>Lista de Usuarios</display:caption>
 
