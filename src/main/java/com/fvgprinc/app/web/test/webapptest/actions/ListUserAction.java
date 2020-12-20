@@ -21,7 +21,7 @@ import org.apache.struts2.convention.annotation.Result;
  */
 @Namespace(value = "/")
 @Action(value = "listuseraction", results = {
-    @Result(name = SUCCESS, location = "/listdata.jsp")})
+    @Result(name = SUCCESS, location = "/listuser.jsp")})
 
 public class ListUserAction extends ActionSupport {
     // private static final long serialVersionUID = -7591893545033222898L;
